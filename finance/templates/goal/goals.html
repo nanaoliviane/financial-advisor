@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Goals</h2>
+<table>
+    <tr>
+        <th>Goal Name</th>
+        <th>Target Amount</th>
+        <th>Current Progress</th>
+        <th>Created At</th>
+    </tr>
+    {% for goal in goals %}
+    <tr>
+        <td>{{ goal.name }}</td>
+        <td>{{ goal.target_amount }}</td>
+        <td>{{ goal.current_progress }}</td>
+        <td>{{ goal.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

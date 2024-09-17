@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Finance App{% endblock %}</title>
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'profile' %}">Profile</a>
+        <a href="{% url 'budget_dashboard' %}">Budget</a>
+        <a href="{% url 'investment_portfolio' %}">Investments</a>
+        <a href="{% url 'goals' %}">Goals</a>
+        <a href="{% url 'logout' %}">Logout</a>
+    </nav>
+
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- Link to JavaScript -->
+    <script src="{% static 'js/script.js' %}"></script>
+</body>
+</html>

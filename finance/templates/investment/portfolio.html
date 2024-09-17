@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Investment Portfolio</h2>
+<table>
+    <tr>
+        <th>Portfolio Value</th>
+        <th>Risk Level</th>
+        <th>Created At</th>
+    </tr>
+    {% for investment in investments %}
+    <tr>
+        <td>{{ investment.portfolio_value }}</td>
+        <td>{{ investment.risk_level }}</td>
+        <td>{{ investment.created_at }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

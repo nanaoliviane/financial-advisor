@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Budget Dashboard</h2>
+{% if budget %}
+    <p><strong>Income:</strong> {{ budget.income }}</p>
+    <p><strong>Expenses:</strong> {{ budget.expenses }}</p>
+    <p><strong>Created At:</strong> {{ budget.created_at }}</p>
+{% else %}
+    <p>No budget data available.</p>
+{% endif %}
+{% endblock %}
